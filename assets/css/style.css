@@ -1,3 +1,7 @@
+:root {
+    --main-color: #0717AB;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -6,7 +10,14 @@
 body{
     font-family: 'Roboto';
     background-color: #f5f6f7;
+    min-height: 100vh;
 }
+
+.container {
+    margin: auto;
+    white-space: nowrap;    
+}
+
 
 /* header */
 
@@ -16,11 +27,7 @@ header {
     position: sticky;
     top: 0;
     padding: 15px 0;
-}
-
-.container {
-    margin: auto;
-    white-space: nowrap;    
+    z-index: 9999;
 }
 
 .container-logo {
@@ -49,20 +56,20 @@ header {
     float: right;
 }
 
-.container .menu li {
+.container-menu .menu li {
     display: inline;
     padding: 20px 10px; 
     float: left;   
 }
 
-.container .menu li a {
+.container-menu .menu li a {
     text-decoration: none;
     color: #000;
     font-weight: semibold;
 }
 
-.container .menu li a:hover {
-    color: #0717AB;
+.container-menu .menu li a:hover, .container-menu .menu li a.active {
+    color: var(--main-color);
     font-weight: bold;
 }
 
@@ -72,39 +79,140 @@ main {
     padding-top: 30px;
 }
 
-.container .grid-viagens:not(:first-child){
-    margin-top: 40px;
+.container .grid-travels:not(:first-child){
+    margin-top: 30px;
 }
 
-.grid-viagens .viagem {
+.grid-travels .travel {
     box-sizing: border-box;
     width: 25%;
     border-radius: 15px;
-    border: 1px solid #000;
     display: inline-block;
     min-height: 350px;  
     vertical-align: top;
     margin-left: 15px;
+    background-color: #fff;
+    border: 0.5px #ccc solid;
+    text-decoration: none;    
+    position: relative;
+    color: #000;
 }
 
-.grid-viagens .viagem:hover {
+.grid-travels .travel:hover {
     box-shadow: 0px 0px 3px 3px rgba(0,0,0,.2);
 }
 
-.grid-viagens .viagem:first-child {
+.grid-travels .travel:first-child {
     margin-left: 0;
 }
 
-.viagem .viagem-imagem {
+.grid-travels .travel .travel-image {
     width: 100%;
     height: 230px;
     border-radius: 15px 15px 0 0;
     object-fit: cover;
 }
 
-.viagem .viagem-info {
-    padding: 10px 30px 30px 30px
+.list-travels .travel {
+    border-radius: 15px;
+    height: 230px;  
+    margin-bottom: 15px;
+    background-color: #fff;
+    border: 0.5px #ccc solid;
+    text-decoration: none;    
+    position: relative;
+    color: #000;
+    display: block;
 }
+
+.list-travels .travel-info {
+    display: inline-block;
+}
+
+.list-travels .travel:hover {
+    box-shadow: 0px 0px 3px 3px rgba(0,0,0,.2);
+}
+
+.list-travels .travel:first-child {
+    margin-left: 0;
+}
+
+.list-travels .travel .travel-image {
+    width: 40%;
+    height: 230px;
+    border-radius: 15px 0px 0 15px;
+    object-fit: cover;
+}
+
+.list-travels .travel .travel-info {
+    width: 60%;
+    vertical-align: top;
+}
+
+.travel .travel-info {
+    padding: 15px 15px 30px 15px
+}
+
+.travel .travel-date {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.travel .travel-flyng {
+    margin-top: 10px;
+    font-size: .95em;
+}
+
+.grid-travels .travel .travel-days {
+    color: #fff;
+    padding: 5px 10px;
+    background-color: var(--main-color);
+    position:absolute;
+    top: 215px;
+    left: 15px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+.travel-price-old {
+    margin-top: 15px;
+    text-decoration: line-through;
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+.travel-price-current {
+    margin-top: 3px;
+    font-size: 1.5em;
+}
+
+.container-button {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.button {
+    border: 1px var(--main-color) solid;
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 15px;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.container .list-travels {
+    word-wrap: normal;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--main-color);
+    height: 150px;
+    margin-top: 30px;
+}
+
+/* medias querys */
 
 @media screen and (min-width: 1360px) {
     .container {
