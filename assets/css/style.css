@@ -11,11 +11,16 @@ body{
     font-family: 'Roboto';
     background-color: #f5f6f7;
     min-height: 100vh;
+    position: relative;
 }
 
 .container {
     margin: auto;
     white-space: nowrap;    
+}
+
+.container-menu {
+    padding-right: 15px;
 }
 
 
@@ -77,111 +82,60 @@ header {
 
 main {
     padding-top: 30px;
+    padding-bottom: 200px;
 }
 
-.container .grid-travels:not(:first-child){
-    margin-top: 30px;
+.list-travels, .grid-travels {
+    padding-top: 20px;
 }
 
-.grid-travels .travel {
-    box-sizing: border-box;
-    width: 25%;
-    border-radius: 15px;
-    display: inline-block;
-    min-height: 350px;  
-    vertical-align: top;
-    margin-left: 15px;
-    background-color: #fff;
-    border: 0.5px #ccc solid;
-    text-decoration: none;    
-    position: relative;
-    color: #000;
-}
-
-.grid-travels .travel:hover {
-    box-shadow: 0px 0px 3px 3px rgba(0,0,0,.2);
-}
-
-.grid-travels .travel:first-child {
-    margin-left: 0;
-}
-
-.grid-travels .travel .travel-image {
-    width: 100%;
-    height: 230px;
-    border-radius: 15px 15px 0 0;
-    object-fit: cover;
-}
-
-.list-travels .travel {
-    border-radius: 15px;
-    height: 230px;  
+.travel {
     margin-bottom: 15px;
     background-color: #fff;
     border: 0.5px #ccc solid;
-    text-decoration: none;    
-    position: relative;
+    border-radius: 15px;
     color: #000;
-    display: block;
+    box-sizing: border-box;
 }
 
-.list-travels .travel-info {
-    display: inline-block;
-}
-
-.list-travels .travel:hover {
+.travel:hover {
     box-shadow: 0px 0px 3px 3px rgba(0,0,0,.2);
 }
 
-.list-travels .travel:first-child {
-    margin-left: 0;
+.travel-info {
+    padding: 15px;
 }
 
-.list-travels .travel .travel-image {
-    width: 40%;
-    height: 230px;
-    border-radius: 15px 0px 0 15px;
-    object-fit: cover;
-}
-
-.list-travels .travel .travel-info {
-    width: 60%;
-    vertical-align: top;
-}
-
-.travel .travel-info {
-    padding: 15px 15px 30px 15px
-}
-
-.travel .travel-date {
+.info-date {
     font-size: 14px;
     margin-top: 5px;
 }
 
-.travel .travel-flyng {
+.info-flyng {
     margin-top: 10px;
     font-size: .95em;
 }
 
-.grid-travels .travel .travel-days {
-    color: #fff;
-    padding: 5px 10px;
-    background-color: var(--main-color);
-    position:absolute;
-    top: 215px;
-    left: 15px;
-    font-size: 13px;
-    border-radius: 5px;
+.info-services {
+    list-style-type: none;
+    margin-top: 10px;
 }
 
-.travel-price-old {
+.info-services li {
+    padding: 5px 0;
+}
+.info-services li span {
+    margin-left: 5px;
+}
+
+.info-price-old {
     margin-top: 15px;
     text-decoration: line-through;
     color: #ccc;
     font-size: 0.9em;
 }
 
-.travel-price-current {
+.info-price-current {
     margin-top: 3px;
     font-size: 1.5em;
 }
@@ -197,19 +151,30 @@ main {
     padding: 15px;
     border-radius: 15px;
     color: var(--main-color);
-    text-decoration: none;
+    text-decoration: none;    
+    background: #fff;
 }
 
-.container .list-travels {
-    word-wrap: normal;
+.button:hover {
+    background-color: var(--main-color);
+    color: #fff;
 }
+
 
 /* footer */
 
 footer {
     background-color: var(--main-color);
     height: 150px;
-    margin-top: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+footer .container{
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 /* medias querys */

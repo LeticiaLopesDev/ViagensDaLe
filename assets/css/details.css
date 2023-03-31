@@ -1,0 +1,34 @@
+.container-detail {
+    background-color: #fff;
+    border: 0.5px #ccc solid;
+    border-radius: 15px;
+    white-space: normal;
+}
+
+.container-detail .detail-carousel {
+    padding-left: 0;
+}
+
+.container-detail .detail-carousel .carousel-item img{
+    border-radius: 15px 0 0px 15px;
+    height: 620px;
+}
+
+.container-detail .info-services {
+    margin-bottom: 0;;
+}
+
+.detail-info {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.info-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.btn-buy {
+    width: 150px;
+}

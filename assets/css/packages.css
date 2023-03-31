@@ -1,0 +1,38 @@
+.list-travels {
+    padding-top: 20px;
+}
+
+.list-travels .travel-image {
+    width: 40%;
+    height: 260px;
+    border-radius: 15px 0px 0 15px;
+    object-fit: cover;
+}
+
+.list-travels .travel-info {
+    width: 60%;
+    box-sizing: border-box;
+    padding-right: 30px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.list-travels .travel-info .info-description, .list-travels .travel-info .info-prices {
+    width: 50%;
+    display: inline-block;
+}
+
+.list-travels .info-prices {
+    text-align: right;
+    vertical-align: top;  
+} 
+
+.list-travels .info-button {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.list-travels .travel {   
+    height: 260px;      
+    display: block;
+}
