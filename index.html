@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/highlights.css">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/highlights.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <title>Viagens Da Le</title>  
 </head>
@@ -15,9 +15,9 @@
             </div>
             <div class="container-menu">
                 <ul class="menu">
-                    <li><a class="active" href="#">HOME</a></li>
+                    <li><a class="active" href="index.html">HOME</a></li>
                     <li><a href="packages.html">PACOTES</a></li>
-                    <li><a href="#">CONTATO</a></li>
+                    <li><a href="contact.html">CONTATO</a></li>
                 </ul>
             </div>
         </div>        
@@ -26,7 +26,7 @@
         <div class="container">
             <h1>Destaques</h1>
             <div class="grid-travels">
-                <div class="travel">
+                <div class="travel" id="travel-maceio">
                     <img class="travel-image" src="./assets/img/viagens/maceio/maceio1.jpg">
                     <span class="travel-days">4 Dias / 3 Noites</span>
                     <div class="travel-info">
@@ -124,10 +124,14 @@
 
     <footer>
         <div class="container">
-            <p>lalalla</p>
+            <div style="text-align: center;">
+                <img class="logo" src="./assets/img/logo.png">
+                <p>Todos os direitos reservados</p>
+            </div>
         </div>
     </footer>
 
     <script src="https://kit.fontawesome.com/09995de6bc.js" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
